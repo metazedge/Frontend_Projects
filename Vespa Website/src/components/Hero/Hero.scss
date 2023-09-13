@@ -1,0 +1,135 @@
+@import '../../App.scss';
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 50px;
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex: 1;
+
+            h1{
+                margin-top: 10px;
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            p{
+                line-height: 2rem;
+                color: grey
+            }
+
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                // padding: 10px;
+                margin-bottom: 20px;
+                padding: 10px 50px 10px 50px;
+                border-radius: 30px;
+                border: none;
+                box-shadow: 10px 10px 20px grey;
+                transition:all 300ms ease;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    transition: all 300ms ease;
+                    opacity: 50%;
+                }
+            }
+
+            button:hover{
+                cursor: pointer;
+                scale: 0.95;
+            }
+            button:hover img{
+                margin-left: 10px;
+            }
+        }
+
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+
+            img{
+                width: 100%;
+                height: 100%;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+
+        @include md{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                    margin: 30px;
+                }
+            }
+        }
+
+        @include lg{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+
+            .left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                }
+            }
+        }
+
+        @include xl{
+            .left{
+                display: flex;justify-content: center;
+                align-items: center;
+                margin-left: 30px;
+                h1{
+                    font-size: 3rem;
+                }
+
+                p{
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+            .right{
+                img{
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+        }
+    }
+}

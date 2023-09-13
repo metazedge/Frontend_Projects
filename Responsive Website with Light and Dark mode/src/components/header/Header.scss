@@ -1,0 +1,99 @@
+@import "../../App.scss";
+.header {
+  @include themify($themes) {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    z-index: 99;
+    .header__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .left__container {
+        font-size: 1.5rem;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: themed("logo");
+        flex: 1;
+        margin-left: 10px;
+      }
+
+      .right__container {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        svg {
+          fill: themed("themeIcon");
+          background: none;
+        }
+
+        svg:hover {
+          cursor: pointer;
+        }
+        @include tablet {
+          width: 100%;
+          a {
+            font-size: 10px;
+          }
+        }
+        @include large_mobile {
+          width: 90%;
+          z-index: 99;
+          position: absolute;
+          top: 4rem;
+          right: 1rem;
+          flex-direction: column;
+          font-weight: 500;
+          padding: 30px;
+          border-radius: 10px;
+          align-items: center;
+
+          box-shadow: 10px 10px 20px grey;
+          transition: all 300ms ease;
+
+          background: rgba(206, 202, 202, 0.034);
+          backdrop-filter: blur(30px);
+          /* fallback for old browsers */
+          -webkit-backdrop-filter: blur(30px);
+
+          a {
+            font-size: 15px;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: themed("textColor");
+          background: none;
+          font-weight: 500;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          margin-right: 10px;
+        }
+      }
+
+      .header__bars {
+        width: 30px;
+        height: 30px;
+        display: none;
+
+        @include large_mobile {
+          display: block;
+          cursor: pointer;
+          color: themed("textColor");
+        }
+      }
+    }
+
+    .horizontal__line {
+      width: 100%;
+      height: 1px;
+      color: white;
+      opacity: 50%;
+    }
+  }
+}

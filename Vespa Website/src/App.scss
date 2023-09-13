@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f0f0;
+}
+
+
+$xsm: 400px;  // For extra small
+$sm: 576px;   // for small
+$md: 768px;// for medium
+$lg: 910px;   // for large
+$xl: 1200px;  // for extra large
+$xxl: 1400px;  // for extra extra large
+
+// for extra small
+@mixin xsm{
+  @media screen and (max-width: $xsm){
+    @content;
+  }
+}
+
+// for small
+@mixin sm{
+  @media screen and (max-width: $sm){
+    @content;
+  }
+}
+
+// for medium
+@mixin md{
+  @media screen and (max-width: $md){
+    @content;
+  }
+}
+@mixin lg{
+  @media screen and (max-width: $lg){
+    @content;
+  }
+}
+
+// for large
+@mixin xl{
+  @media screen and (min-width: $xl){
+    @content;
+  }
+}
+
+// for extra large
+@mixin xxl{
+  @media screen and (max-width: $xxl){
+    @content;
+  }
+}
