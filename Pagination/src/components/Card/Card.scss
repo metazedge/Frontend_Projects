@@ -1,0 +1,32 @@
+.card-container {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  .card {
+    padding: 15px 10px;
+    min-width: 200px;
+    min-height: 100px;
+    margin: 4px 10px;
+    border: 1px solid #000;
+    background: linear-gradient(to bottom, #5b21b6, #1e40af);
+    color: beige;
+
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 300ms ease;
+    &:hover {
+      box-shadow: 5px 5px 15px #64748b;
+    }
+    .category {
+      color: #868d97;
+      font-size: 15px;
+    }
+  }
+}
