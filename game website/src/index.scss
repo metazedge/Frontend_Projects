@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+
+// Desktop first approach
+
+$small_mobile: 320px;
+$medium_mobile: 375px;
+$large_mobile: 430px;
+$tablet: 768px;
+$laptop: 1024px;
+$large_laptop: 1200px;
+
+@media (max-width: $large_laptop) {
+  .container {
+    max-width: $laptop;
+  }
+}
+@media (max-width: $laptop) {
+  .container {
+    max-width: $tablet;
+  }
+}
+@media (max-width: $tablet) {
+  .container {
+    max-width: $large_mobile;
+  }
+}
+@media (max-width: $large_mobile) {
+  .container {
+    max-width: $medium_mobile;
+  }
+}
+@media (max-width: $medium_mobile) {
+  .container {
+    max-width: $small_mobile;
+  }
+}
+@media (max-width: $small_mobile) {
+  .container {
+    width: 100%;
+  }
+}
+
+// MIXINS
+@mixin large_laptop {
+  @media (max-width: $large_laptop) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin large_mobile {
+  @media (max-width: $large_mobile) {
+    @content;
+  }
+}
+@mixin medium_mobile {
+  @media (max-width: $medium_mobile) {
+    @content;
+  }
+}
+@mixin small_mobile {
+  @media (max-width: $small_mobile) {
+    @content;
+  }
+}

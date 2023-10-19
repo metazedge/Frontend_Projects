@@ -1,0 +1,139 @@
+@import "../../index.scss";
+.featured__wrapper {
+  background: rgb(46, 45, 45);
+  margin-top: 30px;
+  padding: 40px 0 40px 0;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include laptop {
+    flex-direction: column;
+  }
+
+  .featured__container_1 {
+    background: rgb(27, 27, 27);
+    border-radius: 15px;
+
+    @include laptop {
+      width: 80%;
+    }
+    h1 {
+      margin-left: 10px;
+      padding: 10px;
+
+      @include laptop {
+        font-size: 25px;
+      }
+      span {
+        color: #e75e8d;
+      }
+    }
+    .featured_games {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // flex-wrap: wrap;
+      }
+      .item {
+        .thumb {
+          position: relative;
+          overflow: hidden;
+          img {
+            border-radius: 23px;
+          }
+          .hover-effect {
+            position: absolute;
+            bottom: -100px;
+            text-align: center;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+
+            h6 {
+              background-color: rgba(31, 33, 34, 0.95);
+              display: inline-block;
+              color: #ec6090;
+              font-weight: 600;
+              font-size: 14px;
+              padding: 10px 20px;
+              border-radius: 25px;
+            }
+          }
+
+          &:hover .hover-effect {
+            opacity: 1;
+            visibility: visible;
+            bottom: 15px;
+          }
+        }
+
+        h4 {
+          font-size: 15px;
+          margin-top: 20px;
+          margin-bottom: 0px;
+          display: inline-block;
+        }
+
+        span {
+          color: #666;
+          display: block;
+          margin-top: 7px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .top-download {
+    background: rgb(27, 27, 27);
+
+    margin: 40px;
+    border-radius: 15px;
+    @include laptop {
+      width: 80%;
+    }
+    .tag {
+      margin-bottom: 20px;
+      padding: 20px;
+      @include laptop {
+        font-size: 25px;
+      }
+
+      span {
+        color: #e75e8d;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 40px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        img {
+          border-radius: 10px;
+        }
+
+        h4 {
+          font-size: 20px;
+        }
+        h6 {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

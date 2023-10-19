@@ -1,0 +1,45 @@
+@import '../../index.scss';
+.card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 20px;
+
+  @include tablet{
+    margin-left: 30px;
+  }
+  .card__container {
+    width: 250px;
+    height: 270px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    margin-right: 70px;
+
+   
+
+
+    img {
+      width: 250px;
+      height: 150px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    h2 {
+      margin: 10px 0 10px 10px;
+      font-size: 25px;
+      color: #ececec;
+    }
+    p {
+      margin-bottom: 10px;
+      margin-left: 10px;
+      font-size: 15px;
+      color: #e7e7e7;
+    }
+  }
+}

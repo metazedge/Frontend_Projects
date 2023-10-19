@@ -1,0 +1,119 @@
+@import "../../index.scss";
+.header__wrapper {
+  margin-top: 15px;
+  z-index: 99;
+  .header__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .header__left {
+      cursor: pointer;
+    }
+
+    .header__right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      @include tablet {
+        flex-direction: column;
+        margin-top: 60px;
+        top: 0;
+        background: rgb(29, 29, 29);
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        transition: all 300ms ease;
+        z-index: 99;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: gray;
+        &:hover {
+          color: #e75e8d;
+          transition: 300ms ease all;
+        }
+      }
+
+      .profile {
+        border: none;
+        background: rgb(48, 47, 47);
+        padding: 5px 10px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        &:hover {
+          background: #b4124b;
+          color: white;
+        }
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .menu_trigger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      margin-top: 25px;
+      //   position: relative;
+
+      @include tablet {
+        display: flex;
+        margin-top: 15px;
+        // z-index: 3;
+      }
+      .line {
+        background-color: #e75e8d; // Color of the lines
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        transition: all 0.4s;
+
+        &:first-child {
+          width: 80%;
+        }
+
+        &:last-child {
+          width: 60%;
+        }
+      }
+
+      &.active {
+        .line {
+          width: 100%;
+          height: 2px;
+          background-color: #e75e8d;
+
+          &:first-child {
+            transform: rotate(45deg) translateY(12px);
+          }
+
+          &:nth-child(2) {
+            opacity: 0; // Hide the middle line
+          }
+
+          &:last-child {
+            transform: rotate(-45deg) translateY(-12px);
+          }
+        }
+      }
+
+      &:hover .line {
+        width: 100%;
+      }
+    }
+  }
+}

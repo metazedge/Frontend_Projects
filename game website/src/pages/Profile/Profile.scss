@@ -1,0 +1,115 @@
+@import "../../index.scss";
+.profile__wrapper {
+  background: rgb(46, 45, 45);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  border-radius: 20px;
+
+  .profile__container {
+    background: rgb(27, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 23px;
+    padding: 20px;
+    width: 88%;
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include laptop {
+      flex-direction: column;
+    }
+    img {
+      border-radius: 23px;
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .info {
+      padding: 20px;
+
+      @include tablet {
+        width: 100%;
+      }
+      .offline {
+        font-size: 14px;
+        color: #fff;
+        background-color: #e75e8d;
+        padding: 8px 20px;
+        display: inline-block;
+        border-radius: 25px;
+        font-weight: 400;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+      }
+      h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 15px;
+        color: gray;
+      }
+
+      a {
+        font-size: 14px;
+        color: #ec6090;
+        background-color: transparent;
+        border: 1px solid #ec6090;
+        padding: 12px 30px;
+        display: inline-block;
+        border-radius: 25px;
+        font-weight: 400;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        margin-top: 20px;
+        &:hover {
+          border-color: #666;
+          color: #e75e8d;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .items {
+      width: 400px;
+      padding: 30px;
+      background: #2b2b2b;
+      border-radius: 15px;
+
+      @include tablet {
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        li {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px 5px 10px 0;
+          color: #666;
+          span {
+            color: #ee417e;
+          }
+        }
+      }
+
+      hr {
+        opacity: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "./index.scss";
+
+.App {
+  .copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+}
