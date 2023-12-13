@@ -1,0 +1,21 @@
+.header{
+    background: #171717;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 10px rgb(37, 37, 37);
+
+    h2{
+        color: antiquewhite;
+        margin-left: 70px;
+        font-size: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        span{
+            font-size: 40px;
+            color: #ff8000;
+        }
+    }
+}

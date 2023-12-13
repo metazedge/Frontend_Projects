@@ -1,0 +1,31 @@
+.search-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-left: 770px;
+
+  label {
+    position: relative;
+    display: block;
+
+    input {
+      width: 30%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      background: #1d1d1d;
+      color: #fff;
+      transition: border-color 0.3s, background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        border-color: #535bf2;
+        background: #1d1d1d;
+      }
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+}

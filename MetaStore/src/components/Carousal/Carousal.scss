@@ -1,0 +1,54 @@
+$primary-color: #fa2020;
+.carousel {
+  img {
+    overflow-x: hidden;
+    width: 100%;
+    height: calc(100vh - 120px);
+  }
+  &-direction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left,
+    .right {
+      color: #fff;
+      padding: 5px;
+      margin: 0 20px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      height: 25px;
+      width: 25px;
+      &.left {
+        left: 0;
+        margin-right: 20px;
+      }
+
+      &.right {
+        right: 0;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &-indicator {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .dot {
+      background-color: #333;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+
+      &.active {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
