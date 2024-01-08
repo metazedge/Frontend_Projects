@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  height: 70px;
+  box-shadow: 10px 10px 100px gray;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      margin-top: 15px;
+      cursor: pointer;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #171717;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      cursor: pointer;
+      i.fas.fa-cart-plus {
+        font-size: 30px;
+        margin-right: -5px;
+      }
+
+      .count {
+        background: #ff0000;
+        color: #fff;
+        padding: 2px 8px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+  }
+}
