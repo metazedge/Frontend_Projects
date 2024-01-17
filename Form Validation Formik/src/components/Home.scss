@@ -1,0 +1,21 @@
+.home {
+  h1 {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+  }
+
+  button {
+    margin-left: 880px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    &:hover {
+      box-shadow: 4px 5px black;
+      background: rgb(247, 194, 194);
+    }
+  }
+}
